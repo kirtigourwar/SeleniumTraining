@@ -28,6 +28,9 @@ public class Selenium_Locators {
 		hilightElement(driver,fName);
 		driver.findElement(By.name("lastname")).sendKeys("lName");
 		driver.findElement(By.cssSelector("input#u_0_o"));
+		driver.findElement(By.className("inputtext _58mg _5dba _2ph-")).sendKeys("testemail1@gmail.com");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("facebookpwd@123");
+		
 		//Thread.sleep(100);
 	
 		}
