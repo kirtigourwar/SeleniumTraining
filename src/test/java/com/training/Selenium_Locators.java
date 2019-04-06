@@ -13,7 +13,8 @@ public class Selenium_Locators {
 	public void setUp()
 	{   
 		
-		System.setProperty("webdriver.chrome.driver","C:/D_Drive/Appium/Softwares/Driver/chromedriver_win32_v72/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\D_Drive\Appium\Softwares\Driver\chromedriver_win32_v72\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","K:/LearnSelenium/Software/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/");
 	}
@@ -28,10 +29,10 @@ public class Selenium_Locators {
 		hilightElement(driver,fName);
 		driver.findElement(By.name("lastname")).sendKeys("lName");
 		driver.findElement(By.cssSelector("input#u_0_o"));
-		driver.findElement(By.className("inputtext _58mg _5dba _2ph-")).sendKeys("testemail1@gmail.com");
+		driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("testemail1@gmail.com");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("facebookpwd@123");
 		
-		//Thread.sleep(100);
+		Thread.sleep(10);
 	
 		}
 	
@@ -42,9 +43,9 @@ public class Selenium_Locators {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].style.border = '2px solid red'", element);
 	}
-	/*@AfterTest
+	@AfterTest
 	public void Closure()
 	{
 	 driver.quit();	
-	}*/
+	}
 }

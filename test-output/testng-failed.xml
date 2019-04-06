@@ -6,7 +6,7 @@
       <class name="com.training.Selenium_Locators">
         <methods>
           <include name="setUp"/>
-          <include name="hilightElement" invocation-numbers="0"/>
+          <include name="hilightElement"/>
           <include name="facebook_Signup"/>
         </methods>
       </class> <!-- com.training.Selenium_Locators -->
